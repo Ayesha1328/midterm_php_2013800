@@ -10,6 +10,15 @@ and open the template in the editor.
 
     createPageHeader('Home');
     
+    echo'<br>';
+    echo '<div class ="tagline" Find the Perfect Gift>';
+    
+    
+    shuffle($advertisingJewellery);
+   
+    
+    echo '<br><br><img class="advertising" src="'.$advertisingJewellery[0].'">';
+    
     
     createPageFooter();
 
