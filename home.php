@@ -12,8 +12,6 @@ and open the template in the editor.
     
    
     
-    echo '<div class ="tagline" Find the Perfect Gift>';
-    
     
     shuffle($advertisingJewellery);
    

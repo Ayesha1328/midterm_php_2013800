@@ -10,19 +10,29 @@
 function createPageHeader($title)
 {   #common HTML page Header
     
-    echo '<div class ="header">';
+    
     ?> <!DOCTYPE HTML>
-            <html>
+            
             <head>
                 <meta charset=\"UTF-8\">
                 <title><?php echo $title; ?></title>
                  <link rel="stylesheet" href="<?php echo FILE_CSS; ?>">
             
             </head>
+                <header class="container">
+                    <div class ="child1">
+                     
+                       
+                    </div>
+                    <div class ="child2">
+                        <?php
+                        displayNavigationMenu();
+                        ?>
+                    </div>
             <body>
     
     <?php
-          displayNavigationMenu();
+          
 }
 
 //function for images folder
@@ -62,7 +72,7 @@ function createPageFooter()
     ?>
                
             </body>
-            </html>
+            
     
     <?php
     
