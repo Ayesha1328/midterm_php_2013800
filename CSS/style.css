@@ -8,8 +8,7 @@ and open the template in the editor.
     Author     : AYESHA
 */
 
-
-.topnav {
+ topnav {
   overflow: hidden;
   background-color: #333;
 }
@@ -34,13 +33,22 @@ and open the template in the editor.
 }
 
 
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+}
+
 body 
 {
     background-color: pink;
     position: relative;
 }
 
-tagline {
+.tagline {
     text-align: center;
     color: white;
     font-size: 42 px;
@@ -54,10 +62,12 @@ tagline {
 
 .footer {
   position: fixed;
-  left: 0;
+  
   bottom: 0;
+  height: 10px;
   width: 100%;
-  background-color: red;
+  padding: 25px;
+  background-color: black;
   color: white;
   text-align: center;
 }

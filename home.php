@@ -10,7 +10,8 @@ and open the template in the editor.
 
     createPageHeader('Home');
     
-    echo'<br>';
+   
+    
     echo '<div class ="tagline" Find the Perfect Gift>';
     
     

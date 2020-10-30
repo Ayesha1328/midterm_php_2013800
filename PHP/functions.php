@@ -10,20 +10,19 @@
 function createPageHeader($title)
 {   #common HTML page Header
     
-    displayNavigationMenu();
+    echo '<div class ="header">';
     ?> <!DOCTYPE HTML>
             <html>
             <head>
                 <meta charset=\"UTF-8\">
                 <title><?php echo $title; ?></title>
-                
-                <link rel="stylesheet" href="<?php echo FILE_CSS; ?>">
+                 <link rel="stylesheet" href="<?php echo FILE_CSS; ?>">
             
             </head>
             <body>
     
     <?php
-        
+          displayNavigationMenu();
 }
 
 //function for images folder
@@ -58,13 +57,15 @@ define('PAGE_ORDERS', 'orders.php');
 //creating footer function without using echo
 function createPageFooter()
 {   #common HTML page Footer
+    
+    echo '<div class = "footer">';
     ?>
                
             </body>
             </html>
     
     <?php
-     
+    
     displayCopyright();
    
 }
