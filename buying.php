@@ -9,11 +9,7 @@ include 'PHP/functions.php';
 
 createPageHeader('Products');
     
-    define(PRODUCT, 12);
-    define(FNAMESIZE, 20);
-    define(LNAMESIZE, 20);
-    define(CITYSIZE, 8);
-    define(COMMENTSIZE, 200);
+   
     
     
     // defining variables and set to empty values
@@ -82,6 +78,10 @@ createPageHeader('Products');
       
     if(mb_strlen($codeerror) == 0 && mb_strlen($fnameerror)== 0 && mb_strlen($lnameerror)== 0 &&mb_strlen($cityerror)== 0 && mb_strlen($commenterror)== 0 ){
           header('Location:customer-success.php');
+          $sub_total = $price * $quantity;
+          $taxes = $sub_total * 12.05;
+          $grand_total = $sub_total + $taxes;
+          round($grand_total, 2);
           exit();
 
       }
@@ -98,16 +98,24 @@ createPageHeader('Products');
     
 
         <form method ="POST" action ="buying.php">
-            <p>Product Code</p>
+            Product Code:
             <input type="text" name="code" value="<?php echo $code;?>">
             <span class="red"><?php echo $codeerror?></span>
-            <p>First Name</p>
+            <br>
+            First Name:
             <input type="text" name="fname" value="<?php echo $fname;?>">
             <span class="red"><?php echo $fnameerror?></span>
-            <p>Last Name</p>
+            <br>
+            Last Name:
             <input type="text" name="lname" value="<?php echo $lname;?>">
             <span class="red"><?php echo $lnameerror?></span>
-            
+            <br>
+            City:
+            <input type="text" name="city" value="<?php echo $city;?>">
+            <span class="red"><?php echo $cityerror?></span>
+            <br>
+            Comment:
+            <textarea name="comment" rows="5" cols="40"></textarea>
             <br>
            
             

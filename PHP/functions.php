@@ -63,6 +63,13 @@ define('PAGE_HOME', 'home.php');
 define('PAGE_BUYING', 'buying.php');
 define('PAGE_ORDERS', 'orders.php');
 
+// functions for buying page
+
+define(PRODUCT, 12);
+define(FNAMESIZE, 20);
+define(LNAMESIZE, 20);
+define(CITYSIZE, 8);
+define(COMMENTSIZE, 200);
 
 //creating footer function without using echo
 function createPageFooter()
