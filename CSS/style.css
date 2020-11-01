@@ -52,6 +52,10 @@ body
     
 }
 
+.myform{
+    overflow: scroll;
+}
+
 .tagline {
     text-align: center;
     color: white;

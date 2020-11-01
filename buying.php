@@ -108,7 +108,7 @@ createPageHeader('Products');
           
           $myfile = fopen("text.txt", "a") or die("File not found");
       
-         fwrite($myfile, $productStr."\r\n");
+         fwrite($myfile, "\r\n".$productStr);
 
          fclose($myfile);
          header('Location:orders.php');
@@ -198,3 +198,7 @@ createPageHeader('Products');
             <input type="reset" name="clear" value="Clear">
                    
         </form>
+<?php
+createPageFooter();
+
+?>
