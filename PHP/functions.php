@@ -23,7 +23,7 @@ function createPageHeader($title)
                 <header class="container">
                     <div class ="child1">
                      <?php
-                        displaylogo();
+                       
                       ?>
                        
                     </div>
@@ -80,6 +80,25 @@ define('FNAMESIZE', 20);
 define('LNAMESIZE', 20);
 define('CITYSIZE', 8);
 define('COMMENTSIZE', 200);
+
+
+ function checkclass($val){
+       
+    if(isset($_GET['command'])){
+        if($_GET['command'] == 'color'){
+            if($val < 100){
+                $GLOBALS['classforcolor'] = 'red';
+            }
+            elseif ($val > 100 && $val < 999) {
+                $GLOBALS['classforcolor'] = 'lightorange';
+            }
+            elseif ($val >= 1000) {
+                $GLOBALS['classforcolor'] = 'green';
+            }
+        }
+    }
+    }
+    
 
 //creating footer function without using echo
 function createPageFooter()

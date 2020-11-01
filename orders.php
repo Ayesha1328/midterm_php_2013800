@@ -25,23 +25,7 @@
             
     </tr>
     <?php
-    function checkclass($val){
-       
-    if(isset($_GET['command'])){
-        if($_GET['command'] == 'color'){
-            if($val < 100){
-                $GLOBALS['classforcolor'] = 'red';
-            }
-            elseif ($val > 100 && $val < 999) {
-                $GLOBALS['classforcolor'] = 'lightorange';
-            }
-            elseif ($val >= 1000) {
-                $GLOBALS['classforcolor'] = 'green';
-            }
-        }
-    }
-    }
-    
+   
     $file = fopen('text.txt','r');
     while(!feof($file)){
         $order = json_decode(fgets($file));

@@ -111,7 +111,7 @@ createPageHeader('Products');
          fwrite($myfile, $productStr."\r\n");
 
          fclose($myfile);
-         header('Location:Success.php');
+         header('Location:orders.php');
           
           exit();
 
@@ -198,8 +198,3 @@ createPageHeader('Products');
             <input type="reset" name="clear" value="Clear">
                    
         </form>
-<?php
-
-   createPageFooter();
-   
-  ?>
