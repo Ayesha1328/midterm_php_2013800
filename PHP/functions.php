@@ -19,6 +19,7 @@ function createPageHeader($title)
                  <link rel="stylesheet" href="<?php echo FILE_CSS; ?>">
             
             </head>
+            <body>
                 <header class="container">
                     <div class ="child1">
                      
@@ -29,7 +30,7 @@ function createPageHeader($title)
                         displayNavigationMenu();
                         ?>
                     </div>
-            <body>
+                </header>
     
     <?php
           
@@ -65,17 +66,18 @@ define('PAGE_ORDERS', 'orders.php');
 
 // functions for buying page
 
-define(PRODUCT, 12);
-define(FNAMESIZE, 20);
-define(LNAMESIZE, 20);
-define(CITYSIZE, 8);
-define(COMMENTSIZE, 200);
+define('PRODUCT', 12);
+define('FNAMESIZE', 20);
+define('LNAMESIZE', 20);
+define('CITYSIZE', 8);
+define('COMMENTSIZE', 200);
 
 //creating footer function without using echo
 function createPageFooter()
 {   #common HTML page Footer
     
     echo '<div class = "footer">';
+     displayCopyright();
     ?>
                
             </body>
@@ -83,14 +85,13 @@ function createPageFooter()
     
     <?php
     
-    displayCopyright();
+   
    
 }
 
 //function to display copyright
 function displayCopyright(){
     
-    echo '<br><br>';
     echo "<span id='copyright'> &copy; Ayesha Begum Shaik (2013800) ".date("Y")."</span>";
     
 }

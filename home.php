@@ -13,10 +13,15 @@ and open the template in the editor.
    
     
     
-    shuffle($advertisingJewellery);
-   
+//    shuffle($advertisingJewellery);
+    $index = rand(0,count($advertisingJewellery)-1);
+            
+    if($index == 0){
+        $sale = "sale";
+    }       
     
-    echo '<br><br><img class="advertising" src="'.$advertisingJewellery[0].'">';
+    echo '<br><br><div class = "image"><img class = "advertising center '.$sale.'" src="'.$advertisingJewellery[$index].'"></div>';
+        
     
     
     createPageFooter();

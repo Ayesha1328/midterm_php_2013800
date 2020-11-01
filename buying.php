@@ -22,12 +22,12 @@ createPageHeader('Products');
     
     if(isset($_POST['submit'])){
     
-    $code = htmlspecialchars($POST['code']);
+    $code = htmlspecialchars($_POST['code']);
     $fname = htmlspecialchars($_POST['fname']);
     $lname = htmlspecialchars($_POST['lname']);
     $city = htmlspecialchars($_POST['city']);
     $comment = htmlspecialchars($_POST['comment']);
-    $price = htmlspecialchars($POST['price']);
+    $price = htmlspecialchars($_POST['price']);
     $quantity = htmlspecialchars($_POST['quantity']);
 
     //If statement for error codes
@@ -39,6 +39,9 @@ createPageHeader('Products');
          if(mb_strlen($code) == 0){
         $codeerror = "Product code Cannot be empty";
     }
+        if(strtoupper(substr($code, 0,1)) != 'P'){
+            $codeerror = "Invalid product code";
+        }
     }
     
     
@@ -74,14 +77,42 @@ createPageHeader('Products');
         $commenterror = "Comments can not contain more than ".COMMENTSIZE." characters";
     }
     
-      
-      
-    if(mb_strlen($codeerror) == 0 && mb_strlen($fnameerror)== 0 && mb_strlen($lnameerror)== 0 &&mb_strlen($cityerror)== 0 && mb_strlen($commenterror)== 0 ){
-          header('Location:customer-success.php');
+    if(!is_numeric($price) or (int)$quantity > 0){
+        $priceerror = "Invalid Price";
+    }
+    elseif(($price) > 10000 ){
+        $priceerror = 'Price cannot be greater than 10000$';
+    }
+    
+    if(!is_numeric($quantity) or !((int)$quantity == (float)$quantity)){
+                $quantityerror= "Invalid quantity";
+              
+            }
+        elseif(($quantity) < 0 or ($quantity) > 99){
+                $quantityerror = 'Quantity must in between 0  and 99';
+                
+            }
+    
+            
+            
+    if(mb_strlen($codeerror) == 0 && mb_strlen($fnameerror)== 0 && mb_strlen($lnameerror)== 0 &&mb_strlen($cityerror)== 0 && mb_strlen($commenterror)== 0 && is_numeric($priceerror) == 0 && is_numeric($quantityerror) == 0 ){
+          
           $sub_total = $price * $quantity;
           $taxes = $sub_total * 12.05;
-          $grand_total = $sub_total + $taxes;
-          round($grand_total, 2);
+          $grand_total = round($sub_total + $taxes,2);
+
+          
+          $product = array($code,$fname, $lname, $city, $comment, $price, $quantity, $sub_total, $taxes, $grand_total );
+          
+          $productStr = json_encode($product);
+          
+          $myfile = fopen("text.txt", "a") or die("File not found");
+      
+         fwrite($myfile, $productStr."\r\n");
+
+         fclose($myfile);
+         header('Location:Success.php');
+          
           exit();
 
       }
@@ -97,8 +128,15 @@ createPageHeader('Products');
 ?>
     
 
-        <form method ="POST" action ="buying.php">
-            Product Code:
+    <form method ="POST" class="myform" action ="buying.php">
+        <div class="row">
+            <div class="col-25">
+                <label for="code">Product Code</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
             <input type="text" name="code" value="<?php echo $code;?>">
             <span class="red"><?php echo $codeerror?></span>
             <br>
@@ -117,10 +155,16 @@ createPageHeader('Products');
             Comment:
             <textarea name="comment" rows="5" cols="40"></textarea>
             <br>
-           
-            
+            Price:
+            <input type="text" name="price" value="<?php echo $price;?>">
+            <span class="red"><?php echo $priceerror?></span>
+            <br>
+            Quantity:
+            <input type="text" name="quantity" value="<?php echo $quantity;?>">
+            <span class="red"><?php echo $quantityerror?></span>
             <br>
             <br>
+         
             
             <input type="submit" name="submit" value="Save">
             <input type="reset" name="clear" value="Clear">

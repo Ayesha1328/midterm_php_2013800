@@ -38,7 +38,7 @@ header {
   top: 0;
   width: 100%;
   text-align: center;
-  
+  background-color: black;
 }
 
 body 
@@ -50,7 +50,7 @@ body
 .tagline {
     text-align: center;
     color: white;
-    font-size: 42 px;
+    font-size: 42px;
 }
 .advertising
 {
@@ -58,15 +58,55 @@ body
     height: 300px;
     width: 300px;
 }
+// Style inputs, select elements and textareas 
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
 
-footer {
+// Style the label to display next to the inputs 
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.footer {
   position: fixed;
   
   bottom: 0;
   height: 10px;
   width: 100%;
-  padding: 25px;
+  padding: 15px;
   background-color: black;
   color: white;
   text-align: center;
+}
+
+.image{
+    /*min-height:480px;*/
+    padding: 50px;
+}
+
+.sale{
+    height: auto;
+    width: 600px;
+    border: 5px red solid;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.copyright{
+    
+}
+.myform{
+    margin-top: 100px;
 }
