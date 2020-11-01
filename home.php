@@ -20,7 +20,7 @@ and open the template in the editor.
         $sale = "sale";
     }       
     
-    echo '<br><br><div class = "image"><img class = "advertising center '.$sale.'" src="'.$advertisingJewellery[$index].'"></div>';
+    echo '<div class = "image"><a href="https://newegg.ca"><img class = "advertising center '.$sale.'" src="'.$advertisingJewellery[$index].'"></a></div>';
         
     
     
