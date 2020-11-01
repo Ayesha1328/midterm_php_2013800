@@ -22,7 +22,9 @@ function createPageHeader($title)
             <body>
                 <header class="container">
                     <div class ="child1">
-                     
+                     <?php
+                        displaylogo();
+                      ?>
                        
                     </div>
                     <div class ="child2">
@@ -34,6 +36,12 @@ function createPageHeader($title)
     
     <?php
           
+}
+
+function displayLogo(){
+    
+    echo '<br><br><img id="gj" src = " '.PICTURE_LOGO.'">';
+    
 }
 
 //function for images folder
@@ -49,6 +57,7 @@ define('PICTURE_B1', FOLDER_IMAGES."b1.jpg");
 define('PICTURE_B2', FOLDER_IMAGES."b2.jpg");
 define('PICTURE_B3', FOLDER_IMAGES."b3.jpg");
 define('PICTURE_B4', FOLDER_IMAGES."b4.jpg");
+define('PICTURE_LOGO', FOLDER_IMAGES."logo.png");
 
 
 

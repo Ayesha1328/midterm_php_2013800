@@ -132,41 +132,69 @@ createPageHeader('Products');
         <div class="row">
             <div class="col-25">
                 <label for="code">Product Code</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      </div>
-    </div>
-            <input type="text" name="code" value="<?php echo $code;?>">
-            <span class="red"><?php echo $codeerror?></span>
-            <br>
-            First Name:
-            <input type="text" name="fname" value="<?php echo $fname;?>">
+            </div>
+            <div class="col-75">
+                <input type="text" id="code" name="code"  value="<?php echo $code;?>">
+                <span class="red"><?php echo $codeerror?></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fname" name="fname"  value="<?php echo $fname;?>">
             <span class="red"><?php echo $fnameerror?></span>
-            <br>
-            Last Name:
-            <input type="text" name="lname" value="<?php echo $lname;?>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="lname" name="lname" value="<?php echo $lname;?>">
             <span class="red"><?php echo $lnameerror?></span>
-            <br>
-            City:
-            <input type="text" name="city" value="<?php echo $city;?>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="city">City</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="city" name="city" value="<?php echo $city;?>">
             <span class="red"><?php echo $cityerror?></span>
-            <br>
-            Comment:
-            <textarea name="comment" rows="5" cols="40"></textarea>
-            <br>
-            Price:
-            <input type="text" name="price" value="<?php echo $price;?>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="comment">Comment</label>
+            </div>
+            <div class="col-75">
+                <textarea name="comment" rows="5" cols="40"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="price">Price</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="price" name="price" value="<?php echo $price;?>">
             <span class="red"><?php echo $priceerror?></span>
-            <br>
-            Quantity:
-            <input type="text" name="quantity" value="<?php echo $quantity;?>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="qantity">Quantity</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="quantity" name="quantity" value="<?php echo $quantity;?>">
             <span class="red"><?php echo $quantityerror?></span>
-            <br>
-            <br>
-         
-            
-            <input type="submit" name="submit" value="Save">
+            </div>
+        </div>
+          
+        <br>
+        <br>
+            <input type="submit" name="submit" value="Submit">
             <input type="reset" name="clear" value="Clear">
                    
         </form>
