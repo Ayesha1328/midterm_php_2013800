@@ -16,7 +16,7 @@ and open the template in the editor.
 .topnav a {
   float: left;
   color: #f2f2f2;
-  text-align: center;
+  text-align: right;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -37,13 +37,13 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  text-align: center;
   background-color: black;
 }
 
 logo{
-    height: 140px;
-    width: 140px;
+    height: 15x;
+    width: 15px;
+    text-align: left;
 }
 
 body 
