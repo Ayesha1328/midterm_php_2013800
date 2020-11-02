@@ -21,13 +21,8 @@ function createPageHeader($title)
             </head>
             <body>
                 <header class="container">
+
                     <div class ="child1">
-                     <?php
-                         displayLogo()
-                      ?>
-                       
-                    </div>
-                    <div class ="child2">
                         <?php
                         displayNavigationMenu();
                         ?>
@@ -129,6 +124,7 @@ function displayCopyright(){
 function displayNavigationMenu(){
     
     echo '<div class = "topnav">';
+    displayLogo();
     echo '&nbsp<a href = " '.PAGE_HOME.'">HOME</a>';
     echo '&nbsp<a href = "'.PAGE_BUYING.'">PRODUCTS</a>';
     echo '&nbsp<a href = "'.PAGE_ORDERS.'">ORDERS</a>';

@@ -77,6 +77,11 @@ body
     color: green;
 }
 
+.para{
+    color : black;
+    font-size : 30px;
+}
+
 input[type=text], select, textarea{
   width: 50%;
   padding: 12px;
@@ -130,7 +135,7 @@ input[type=submit],[type = reset] {
 }
 
 .order{
-    margin-top:300px;
+    margin-top: 150px;
 }
 
 table,th,td{

@@ -129,13 +129,14 @@ createPageHeader('Products');
     
 
     <form method ="POST" class="myform" action ="buying.php">
+        <span class ="red" > *Required Fields </span>
         <div class="row">
             <div class="col-25">
                 <label for="code">Product Code</label>
             </div>
             <div class="col-75">
                 <input type="text" id="code" name="code"  value="<?php echo $code;?>">
-                <span class="red"><?php echo $codeerror?></span>
+                <span class="red">*<?php echo $codeerror?></span>
             </div>
         </div>
         <div class="row">
@@ -144,7 +145,7 @@ createPageHeader('Products');
             </div>
             <div class="col-75">
                 <input type="text" id="fname" name="fname"  value="<?php echo $fname;?>">
-            <span class="red"><?php echo $fnameerror?></span>
+            <span class="red">*<?php echo $fnameerror?></span>
             </div>
         </div>
         <div class="row">
@@ -153,7 +154,7 @@ createPageHeader('Products');
             </div>
             <div class="col-75">
                 <input type="text" id="lname" name="lname" value="<?php echo $lname;?>">
-            <span class="red"><?php echo $lnameerror?></span>
+            <span class="red">*<?php echo $lnameerror?></span>
             </div>
         </div>
         <div class="row">
@@ -162,7 +163,7 @@ createPageHeader('Products');
             </div>
             <div class="col-75">
                 <input type="text" id="city" name="city" value="<?php echo $city;?>">
-            <span class="red"><?php echo $cityerror?></span>
+            <span class="red">*<?php echo $cityerror?></span>
             </div>
         </div>
         <div class="row">
@@ -179,7 +180,7 @@ createPageHeader('Products');
             </div>
             <div class="col-75">
                 <input type="text" id="price" name="price" value="<?php echo $price;?>">
-            <span class="red"><?php echo $priceerror?></span>
+            <span class="red">*<?php echo $priceerror?></span>
             </div>
         </div>
         <div class="row">
@@ -188,12 +189,10 @@ createPageHeader('Products');
             </div>
             <div class="col-75">
                 <input type="text" id="quantity" name="quantity" value="<?php echo $quantity;?>">
-            <span class="red"><?php echo $quantityerror?></span>
+            <span class="red">*<?php echo $quantityerror?></span>
             </div>
         </div>
-          
-        <br>
-        <br>
+         
             <input type="submit" name="submit" value="Submit">
             <input type="reset" name="clear" value="Clear">
                    

@@ -10,7 +10,8 @@ and open the template in the editor.
 
     createPageHeader('Home');
     
-   
+   echo '<div class ="para"> Find the Perfect Gift </div>';
+    
     
     
 //    shuffle($advertisingJewellery);
@@ -18,6 +19,7 @@ and open the template in the editor.
             
     if($index == 0){
         $sale = "sale";
+        
     }       
     
     echo '<div class = "image"><a href="https://newegg.ca"><img class = "advertising center '.$sale.'" src="'.$advertisingJewellery[$index].'"></a></div>';
